@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Math Training Application",
+  "version": "1.0",
+  "description": "A math training application.",
+  "icons": {
+    "16": "favicon.svg",
+    "48": "favicon.svg",
+    "128": "favicon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["web-client-content-script.js"]
+    }
+  ],
+  "permissions": ["storage", "http://localhost:5000/*"]
+}

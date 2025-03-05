@@ -1,0 +1,61 @@
+Local:    http://localhost:3000      │
+   │   - Network:  http://192.168.1.12:3000 
+
+1. Take note of your session ID:
+
+   0731C
+ssh <username>@<192.168.1.175>
+   mini: 192.168.1.175
+   mac:
+
+   . Visit the URL below on any device and follow the instructions to get your code:
+
+   https://auth.firebase.tools/login?code_challenge=dqtLyC1H3Y5PkRQs8cxqUi6QWykPFue6fqP6dQnwIpY&session=0731ce98-b939-4c1c-a99e-8a239c939aab&attest=ISIGuGLdaG92TCM0cSSuqze2PArs3gBzvP3eUlkh4uw
+
+{
+  "short_name": "Math App",
+  "name": "Math Training Application",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+
+
+
+{
+  "short_name": "Math App",
+  "manifest_version": 3,
+  "name": "Math Training Application",
+  "version": "1.0", 
+
+  "description": "A math training application.",
+  "icons": {
+     "type": "image/x-icon",
+    "src": "favicon.svg",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "16": "favicon.svg",
+    "48": "favicon.svg",
+    "128": "favicon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], 
+
+      "js": ["web-client-content-script.js"]
+    }
+  ],
+  "permissions": ["storage"],
+
+    "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
